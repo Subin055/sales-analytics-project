@@ -14,3 +14,14 @@ total_profit = data["Profit"].sum()
 
 print("Total Sales:", total_sales)
 print("Total Profit:", total_profit)
+
+# Calculate sales by product
+product_sales = data.groupby("Product")["Sales"].sum()
+
+# Find the best-selling product
+best_product = product_sales.idxmax()
+
+print("Sales by Product:")
+print(product_sales)
+
+print("Best-Selling Product:", best_product)
